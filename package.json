@@ -5,7 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon index.ts"
+    "dev": "nodemon index.ts",
+    "build": "tsc",
+    "prisma:migrate": "prisma migrate deploy",
+    "start": "npm run prisma:migrate && node dist/index.js"
   },
   "keywords": [],
   "author": "",
